@@ -1,14 +1,14 @@
-import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 
 public class CardDeck {
-	private List<Card> cards;
+	private Stack<Card> cards;
 	private static final String[] PATTERNS = {"spade","heart","diamond","club","Joker"};
 	private static final int CARD_COUNT = 13;
 	
 	private List<Card> generateCards(){
-		cards = new LinkedList();
+		cards = new Stack();
 		
 		for(String pattern : PATTERNS){
 			if(!pattern.equals("Joker")){

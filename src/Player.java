@@ -1,13 +1,11 @@
-import java.util.LinkedList;
-import java.util.List;
+import java.util.Stack;
 
 public class Player {
-	private List<Card> cards;
+	private Stack<Card> cards;
 	private String name;
 	private boolean holdingJokerFlag = false;
 	
 	public Player(String name){
-		cards = new LinkedList<>();
 		this.name = name;
 	}
 	
@@ -25,11 +23,7 @@ public class Player {
 	}
 	
 	public void sameCardNumberCheck(Card inputCard){
-		for(Card card : cards){
-			if(inputCard.getNumber() == card.getNumber()){
 				
-			}
-		}
 	}
 	
 	public void romoveCard(){

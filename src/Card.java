@@ -21,4 +21,10 @@ public class Card {
 			return String.valueOf(number);
 		}
 	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	
 }

@@ -9,8 +9,10 @@ public class Player {
 		this.name = name;
 	}
 	
-	public void addCardList(Card card){
-		
+	public void addCard(Card card){
+		if(!sameCardNumberCheck(card)){
+			cards.add(card);
+		}
 	}
 	
 	public boolean holdingJokerYN(){
@@ -22,13 +24,18 @@ public class Player {
 		return holdingJokerFlag;
 	}
 	
-	public void sameCardNumberCheck(Card inputCard){
-				
+	public boolean sameCardNumberCheck(Card inputCard){
+		int i=0;
+				for(Card card : cards){
+					i++;
+					if(card.getNumber() == inputCard.getNumber()){
+						cards.remove(i);
+						return true;
+					}
+				}
+				return false;
 	}
 	
-	public void romoveCard(){
-		
-	}
 	public String getName() {
 		return name;
 	}
